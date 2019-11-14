@@ -1,0 +1,329 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+body {
+	width: 480px;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 0px;
+	flex-wrap: wrap;
+}
+
+
+nav a {
+	font-weight: bold;
+	color: gray;
+	text-decoration: none;
+	flex-basis: 100%;
+	/* I feel like I shouldnt be using this? */
+	text-align: center;
+	font-size: 22px;
+	padding: 20px 0px;
+	border-bottom: 1px solid black;
+}
+
+nav a:first-child {
+	border-top: 1px solid black;
+}
+
+
+header.index {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 80px;
+	border-bottom: 2px solid black;
+	padding-bottom: 60px;
+}
+
+.left-header {
+	text-align: center;
+}
+
+.left-header h1 {
+	font-size: 85px;
+}
+
+a.main-cta {
+	width: 160px;
+	margin: 0px auto 0px auto;
+	display: block;
+	text-decoration: none;
+	color: black;
+	border: solid;
+	border-color: black;
+	border-width: 1px;
+	padding: 8px 0px 8px 0px;
+}
+
+.body-content {
+	border-bottom: 2px solid black;
+}
+
+.top-content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+}
+
+.top-content .inline-content {
+	flex-basis: 100%;
+	margin-top: 40px;
+}
+
+.bottom-content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+.bottom-content .inline-content {
+	flex-basis: 100%;
+	margin-top: 40px;
+}
+
+.contact {
+	margin-top: 40px;
+}
+
+.contact address {
+	margin-bottom: 15px;
+}
+
+.contact .phone {
+	margin-bottom: 15px;
+}
+
+.contact .email {
+	margin-bottom: 15px;
+}
+
+.copyright {
+	margin-top: 50px;
+	margin-bottom: 200px;
+	text-align: center;
+}
+
+img.services-header-img {
+	margin-top: 30px;
+	max-width: 100%;
+}
+
+nav.services-page {
+	font-weight: bold;
+}
+
+header.services-page {
+	margin-top: 30px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid black;
+}
+
+header.services-page h1 {
+	font-size: 26px;
+}
+
+#services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 40px;
+	border-bottom: 2px solid;
+}
+
+.service {
+	padding: 20px;
+	margin-top: 40px;
+	border: 1px solid;
+	background-color: #f4f3f4;
+}
+
+.offer-cta {
+	border: 1px solid;
+	text-align: center;
+	margin: 20px 0px 0px 0px;
+	padding: 12px 0px 12px 0px;
+	width: 130px;
+	background-color: white;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+#additional-info {
+	margin-top: 40px;
+	display: flex;
+}
+
+#facts {
+	padding-right: 50px;
+}
+
+#facts ul {
+	margin-top: 20px;
+	list-style: square inside;
+}
+
+#facts ul li {
+	margin-top: 10px;
+}
+
+.middle-img {
+	width: 100%;
+}
+
+/* Desktop - More than 800px */
+@media(min-width: 800px) {
+	body {
+		max-width: 876px;
+	}
+
+	nav {
+		margin-top: 50px;
+		flex-wrap: nowrap;
+	}
+
+	nav a {
+		flex-basis: auto;
+		text-align: left;
+		font-size: 100%;
+		padding: 0px;
+		border-bottom: none
+	}
+
+	.top-content {
+		flex-wrap: nowrap;
+		margin: 40px 0px;
+	}
+
+	.bottom-content {
+		flex-wrap: nowrap;
+		margin: 40px 0px;
+	}
+
+	.top-content .inline-content {
+		flex-basis: 45%;
+	}
+
+	.bottom-content .inline-content {
+		flex-basis: 30%;
+	}
+
+	.middle-img {
+		width: auto;
+	}
+
+	.responsive-logo {
+		display: none;
+	}
+}
+
+
+/* Tablet - Between 500px and 800px */
+@media(min-width: 500px) {
+	body {
+		width: 770px;
+
+	}
+
+	img.right-header {
+		display: none;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.responsive-logo {
+		display: block;
+		margin: 20px auto;
+	}
+
+	.middle-img {
+		/* width: 740px; */
+		width: 100%;
+	}
+}
+
+
+
+
