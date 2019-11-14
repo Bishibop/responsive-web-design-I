@@ -72,7 +72,8 @@ h1, h2, h3, h4, h5 {
 
 body {
 	max-width: 876px;
-	margin: 0px auto 0px auto;
+	margin: 0px auto;
+	padding: 20px;
 }
 
 nav {
@@ -84,6 +85,7 @@ nav {
 }
 
 nav a {
+	font-weight: bold;
 	color: gray;
 	text-decoration: none;
 }
@@ -93,7 +95,7 @@ header.index {
 	align-items: center;
 	justify-content: space-evenly;
 	margin-top: 80px;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 	padding-bottom: 60px;
 }
 
@@ -103,9 +105,6 @@ header.index {
 
 .left-header h1 {
 	font-size: 85px;
-}
-
-img.right-header {
 }
 
 a.main-cta {
@@ -121,7 +120,7 @@ a.main-cta {
 }
 
 .body-content {
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 }
 
 .top-content {
@@ -229,17 +228,88 @@ header.services-page h1 {
 	margin-top: 10px;
 }
 
+.responsive-logo {
+	display: none;
+}
+
+/* Tablet: Between 500 and 800 pixels */
 @media(max-width: 800px) {
 	body {
-		background: red;
+		width: 770px;
+
+	}
+
+	img.right-header {
+		display: none;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.responsive-logo {
+		display: block;
+		margin: 20px auto;
+	}
+
+	.middle-img {
+		/* width: 740px; */
+		width: 100%;
+	}
+
+}
+
+/* Mobile: Below than 500 pixels */
+@media(max-width: 500px){
+	body {
+		width: 480px;
+	}
+
+	nav {
+		margin-top: 0px;
+		flex-wrap: wrap;
+		/* Why couldnt I get this to work?
+		justify-content: center; */
+	}
+
+	nav a:first-child {
+		border-top: 1px solid black;
+	}
+
+	nav a {
+		flex-basis: 100%;
+		/* I feel like I shouldnt be using this? */
+		text-align: center;
+		font-size: 22px;
+		padding: 20px 0px;
+		border-bottom: 1px solid black;
+	}
+
+	.top-content {
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+
+	.top-content .inline-content {
+		flex-basis: 100%;
+		margin-top: 40px;
+	}
+
+	.bottom-content {
+		flex-wrap: wrap;
+		margin-top: 0px;
+	}
+
+	.bottom-content .inline-content {
+		flex-basis: 100%;
+		margin-top: 40px;
+	}
+
+	.middle-img {
+		width: 100%;
 	}
 }
 
-@media(max-width: 500px){
-	body {
-		background: blue;
-	}
-}
 
 
 
