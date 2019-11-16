@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5 {
 
 
 body {
-	max-width: 876px;
+	width: 480px;
 	margin: 0px auto;
 	padding: 20px;
 }
@@ -81,14 +81,27 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	margin-top: 50px;
+	margin-top: 0px;
+	flex-wrap: wrap;
 }
+
 
 nav a {
 	font-weight: bold;
 	color: gray;
 	text-decoration: none;
+	flex-basis: 100%;
+	/* I feel like I shouldnt be using this? */
+	text-align: center;
+	font-size: 22px;
+	padding: 20px 0px;
+	border-bottom: 1px solid black;
 }
+
+nav a:first-child {
+	border-top: 1px solid black;
+}
+
 
 header.index {
 	display: flex;
@@ -126,21 +139,27 @@ a.main-cta {
 .top-content {
 	display: flex;
 	justify-content: space-between;
-	margin: 40px 0px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
 }
 
 .top-content .inline-content {
-	flex-basis: 45%;
+	flex-basis: 100%;
+	margin-top: 40px;
 }
 
 .bottom-content {
 	display: flex;
 	justify-content: space-between;
-	margin: 40px 0px;
+	flex-wrap: wrap;
+	margin-top: 0px;
+	margin-bottom: 40px;
 }
 
 .bottom-content .inline-content {
-	flex-basis: 30%;
+	flex-basis: 100%;
+	margin-top: 40px;
 }
 
 .contact {
@@ -228,12 +247,12 @@ header.services-page h1 {
 	margin-top: 10px;
 }
 
-.responsive-logo {
-	display: none;
+.middle-img {
+	width: 100%;
 }
 
-/* Tablet: Between 500 and 800 pixels */
-@media(max-width: 800px) {
+/* Tablet - Between 500px and 800px */
+@media(min-width: 500px) {
 	body {
 		width: 770px;
 
@@ -256,60 +275,53 @@ header.services-page h1 {
 		/* width: 740px; */
 		width: 100%;
 	}
-
 }
 
-/* Mobile: Below than 500 pixels */
-@media(max-width: 500px){
+/* Desktop - More than 800px */
+@media(min-width: 800px) {
 	body {
-		width: 480px;
+		max-width: 876px;
 	}
 
 	nav {
-		margin-top: 0px;
-		flex-wrap: wrap;
-		/* Why couldnt I get this to work?
-		justify-content: center; */
-	}
-
-	nav a:first-child {
-		border-top: 1px solid black;
+		margin-top: 50px;
+		flex-wrap: nowrap;
 	}
 
 	nav a {
-		flex-basis: 100%;
-		/* I feel like I shouldnt be using this? */
-		text-align: center;
-		font-size: 22px;
-		padding: 20px 0px;
-		border-bottom: 1px solid black;
+		flex-basis: auto;
+		text-align: left;
+		font-size: 100%;
+		padding: 0px;
+		border-bottom: none
 	}
 
 	.top-content {
-		flex-wrap: wrap;
-		margin-top: 10px;
-	}
-
-	.top-content .inline-content {
-		flex-basis: 100%;
-		margin-top: 40px;
+		flex-wrap: nowrap;
+		margin: 40px 0px;
 	}
 
 	.bottom-content {
-		flex-wrap: wrap;
-		margin-top: 0px;
+		flex-wrap: nowrap;
+		margin: 40px 0px;
+	}
+
+	.top-content .inline-content {
+		flex-basis: 45%;
 	}
 
 	.bottom-content .inline-content {
-		flex-basis: 100%;
-		margin-top: 40px;
+		flex-basis: 30%;
 	}
 
 	.middle-img {
-		width: 100%;
+		width: auto;
+	}
+
+	.responsive-logo {
+		display: none;
 	}
 }
-
 
 
 

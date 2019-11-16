@@ -85,7 +85,6 @@ nav {
 }
 
 nav a {
-	font-weight: bold;
 	color: gray;
 	text-decoration: none;
 }
@@ -280,6 +279,7 @@ header.services-page h1 {
 		flex-basis: 100%;
 		/* I feel like I shouldnt be using this? */
 		text-align: center;
+		font-weight: bold;
 		font-size: 22px;
 		padding: 20px 0px;
 		border-bottom: 1px solid black;
